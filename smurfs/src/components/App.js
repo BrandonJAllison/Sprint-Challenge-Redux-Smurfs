@@ -7,11 +7,13 @@ import React, { Component } from "react";
   import Header from "./Header"
   import About from './About'
   
-  
+
 const app = {
   color: '#0491C8',
   fontFamily: 'Chicle, cursive',
 }
+
+
 	class App extends Component {
 	  render() {
 	    return (
