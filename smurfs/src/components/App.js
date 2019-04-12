@@ -5,12 +5,17 @@ import React, { Component } from "react";
 	import AddSmurf from "./AddSmurf";
   import UpdateSmurf from "./UpdateSmurf";
   import Header from "./Header"
-	
-
+  import About from './About'
+  
+  
+const app = {
+  color: '#0491C8',
+  fontFamily: 'Chicle, cursive',
+}
 	class App extends Component {
 	  render() {
 	    return (
-	      <div className="App">
+	      <div style={app} className='App'>
           <div>
           <Header/>
           </div>
@@ -19,9 +24,12 @@ import React, { Component } from "react";
           <h1>SMURF REDUX VILLIAGE</h1>
 
 	        <div>
+           
             <Route path="/update/:id" component={UpdateSmurf} />
             <Route path="/add" component={AddSmurf} />
-            <SmurfList />
+            <Route exact path = "/" component = {SmurfList} />
+            <Route path ="/about" component = { About } />
+            
 	        </div>
 
 	      </div>
